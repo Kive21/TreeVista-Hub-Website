@@ -512,6 +512,50 @@ nav ul li a:hover::after {
         }
         
         @media screen and (max-width: 800px) {
+            .menu-icon {
+                width: 30px;
+                display: block; /* Ensure menu icon is visible */
+                cursor: pointer;
+                position: absolute;
+                right: 20px; /* Adjust position as per your design */
+                top: 20px; /* Adjust position as per your design */
+                z-index: 101; /* Ensure menu icon is above other content */
+            }
+            
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Ensure items are spaced apart */
+                padding: 20px;
+            }
+            
+            nav {
+                flex: 1;
+                text-align: right;
+                display: none; /* Hide the nav items by default */
+                position: absolute;
+                top: 60px; /* Adjust as per your header height */
+                left: 0;
+                background: #fff; /* Background color for the dropdown */
+                width: 100%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 100; /* Ensure dropdown is above other content */
+            }
+            
+            nav.active {
+                display: block; /* Show the nav items */
+            }
+            
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                padding: 20px;
+                margin: 0; /* Remove default margin */
+            }
+            
+            nav ul li {
+                margin: 10px 0; /* Add spacing between items */
+                text-align: center; /* Center align items */
+            }
         .row {
         text-align: center;
         }
@@ -530,35 +574,51 @@ nav ul li a:hover::after {
         }
         .cart-info p {
         display: none;
-        }
-        .navbar {
-        padding: 10px 20px;
-        }
-        #MenuItems {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: #333;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-        max-height: 0;
-        }
-        #MenuItems li {
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        }
-        #MenuItems li a {
-        color: #fff;
-        }
-        .menu-icon {
-        display: block;
         }
         }
         
         @media (max-width: 600px) {
+            .menu-icon {
+                display: block; /* Ensure menu icon is visible */
+                position: absolute;
+                right: 10px; /* Adjust position as per your design */
+                top: 10px; /* Adjust position as per your design */
+                z-index: 101; /* Ensure menu icon is above other content */
+            }
+            
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Ensure items are spaced apart */
+                padding: 10px;
+            }
+            
+            nav {
+                flex: 1;
+                text-align: center; /* Center align items */
+                display: none; /* Hide the nav items by default */
+                position: absolute;
+                top: 50px; /* Adjust as per your header height */
+                left: 0;
+                background: #fff; /* Background color for the dropdown */
+                width: 100%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 100; /* Ensure dropdown is above other content */
+            }
+            
+            nav.active {
+                display: block; /* Show the nav items */
+            }
+            
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                padding: 20px;
+                margin: 0; /* Remove default margin */
+            }
+            
+            nav ul li {
+                margin: 10px 0; /* Add spacing between items */
+            }
         .row {
         text-align: center;
         }
@@ -577,30 +637,5 @@ nav ul li a:hover::after {
         }
         .cart-info p {
         display: none;
-        }
-        .navbar {
-        padding: 10px 20px;
-        }
-        #MenuItems {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: #333;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-        max-height: 0;
-        }
-        #MenuItems li {
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        }
-        #MenuItems li a {
-        color: #fff;
-        }
-        .menu-icon {
-        display: block;
         }
         }
