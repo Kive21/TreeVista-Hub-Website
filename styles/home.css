@@ -582,7 +582,6 @@ nav ul li a:hover::after {
                 cursor: pointer;/* Show the menu icon */
                 position: absolute;
                 top: 77px; /* Adjust as per your header height */
-                right: 72 px; /* Adjust as per your header height */
             }
             .navbar {
                 display: flex;
