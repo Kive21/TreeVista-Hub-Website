@@ -551,6 +551,7 @@ nav ul li a:hover::after {
             }
         .row {
         text-align: center;
+        margin: 100px auto 50px;
         }
         .col-2, .col-3, .col-4 {
         flex-basis: 100%;
@@ -566,13 +567,22 @@ nav ul li a:hover::after {
         line-height: 32px;
         }
         .cart-info p {
-        display: none;
+            display: flex;
+            flex-wrap: wrap;
         }
         }
         
         @media (max-width: 600px) {
+            body, html {
+                overflow-x: hidden;
+            }
+            
             .menu-icon {
                 display: inline-block; /* Show the menu icon */
+                cursor: pointer;/* Show the menu icon */
+                position: absolute;
+                top: 77px; /* Adjust as per your header height */
+                right: 72 px; /* Adjust as per your header height */
             }
             .navbar {
                 display: flex;
@@ -586,7 +596,7 @@ nav ul li a:hover::after {
                 text-align: center; /* Center align items */
                 display: none; /* Hide the nav items by default */
                 position: absolute;
-                top: 50px; /* Adjust as per your header height */
+                top: 130px; /* Adjust as per your header height */
                 left: 0;
                 background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
                 width: 100%;
@@ -605,7 +615,7 @@ nav ul li a:hover::after {
             }
             
             nav ul li {
-                margin: 10px 0; /* Add spacing between items */
+                margin: 15x 0; /* Add spacing between items */
             }
         .row {
         text-align: center;
@@ -622,6 +632,9 @@ nav ul li a:hover::after {
         .single-product h1 {
         font-size: 26px;
         line-height: 32px;
+        }
+        .cart-info p {
+        margin-left: -50px;
         }
         .cart-info p {
         display: none;
