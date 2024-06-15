@@ -3,23 +3,23 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebas
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
 // TreeVista Hub Firebase configuration
 const firebaseConfig = {
-  apiKey: FIREBASE_API_KEY,
-  authDomain: FIREBASE_AUTH_DOMAIN,
-  projectId: FIREBASE_PROJECT_ID,
-  storageBucket: FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
-  appId: FIREBASE_APP_ID,
-  measurementId: FIREBASE_MEASUREMENT_ID
-};
+    apiKey: "AIzaSyDztSMTwCkZ4ZMIELGb5sym_Ej5iX2yCTg",
+    authDomain: "treevista-database-133b4.firebaseapp.com",
+    projectId: "treevista-database-133b4",
+    storageBucket: "treevista-database-133b4.appspot.com",
+    messagingSenderId: "347600749387",
+    appId: "1:347600749387:web:1a09815a85556382751ece",
+    measurementId: "G-QFET2PTN20"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-dotenv.config();
+// dotenv.config();
 
 
 // Initialize Firestore and Storage
