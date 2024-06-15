@@ -268,19 +268,19 @@ nav ul li a:hover::after {
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
-    color: #fff;
+    color: #000000;
     animation: fadeInUp 1s ease;
     }
     
     .offer .col-2 p {
     font-size: 16px;
-    color: #fff;
+    color: #000000;
     margin: 25px 0;
     animation: fadeInUp 1.5s ease;
     }
     
     .offer .col-2 small {
-    color: #fff;
+    color: #000000;
     animation: fadeInUp 2s ease;
     }
     
