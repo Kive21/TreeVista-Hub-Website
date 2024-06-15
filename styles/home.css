@@ -513,15 +513,8 @@ nav ul li a:hover::after {
         
         @media screen and (max-width: 800px) {
             .menu-icon {
-                width: 30px;
-                display: block; /* Ensure menu icon is visible */
-                cursor: pointer;
-                position: absolute;
-                right: 20px; /* Adjust position as per your design */
-                top: 20px; /* Adjust position as per your design */
-                z-index: 101; /* Ensure menu icon is above other content */
+                display: inline-block; /* Show the menu icon */
             }
-            
             .navbar {
                 display: flex;
                 align-items: center;
@@ -534,9 +527,9 @@ nav ul li a:hover::after {
                 text-align: right;
                 display: none; /* Hide the nav items by default */
                 position: absolute;
-                top: 60px; /* Adjust as per your header height */
+                top: 130px; /* Adjust as per your header height */
                 left: 0;
-                background: #fff; /* Background color for the dropdown */
+                background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
                 width: 100%;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                 z-index: 100; /* Ensure dropdown is above other content */
@@ -579,13 +572,8 @@ nav ul li a:hover::after {
         
         @media (max-width: 600px) {
             .menu-icon {
-                display: block; /* Ensure menu icon is visible */
-                position: absolute;
-                right: 10px; /* Adjust position as per your design */
-                top: 10px; /* Adjust position as per your design */
-                z-index: 101; /* Ensure menu icon is above other content */
+                display: inline-block; /* Show the menu icon */
             }
-            
             .navbar {
                 display: flex;
                 align-items: center;
@@ -600,7 +588,7 @@ nav ul li a:hover::after {
                 position: absolute;
                 top: 50px; /* Adjust as per your header height */
                 left: 0;
-                background: #fff; /* Background color for the dropdown */
+                background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
                 width: 100%;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                 z-index: 100; /* Ensure dropdown is above other content */

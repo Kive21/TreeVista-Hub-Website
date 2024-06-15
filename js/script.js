@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle mobile menu
-    const menuIcon = document.querySelector('.menu-icon');
-    const menuItems = document.getElementById('MenuItems');
-  
-    function toggleMenu() {
-      menuItems.classList.toggle('show');
-    }
-  
-    menuIcon.addEventListener('click', toggleMenu);
+    // Function to toggle the visibility of the navigation menu
+function toggleMenu() {
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('active');
+}
+
+// Adding event listener to the menu icon
+document.getElementById('menuIcon').addEventListener('click', toggleMenu);
   
     // Smooth scrolling
     const links = document.querySelectorAll('a[href^="#"]');
