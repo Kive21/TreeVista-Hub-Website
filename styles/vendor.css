@@ -33,22 +33,22 @@ body {
   font-size: 2.5rem;
 }
 
-nav {
+.vendor-nav {
   margin-bottom: 20px;
 }
 
-nav ul {
+.vendor-nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-nav ul li {
+.vendor-nav ul li {
   margin-right: 10px;
 }
 
-nav ul li a {
+.vendor-nav ul li a {
   text-decoration: none;
   color: #333;
   font-size: 1.2rem;
@@ -57,7 +57,7 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
+.vendor-nav ul li a:hover {
   background-color: #007bff;
   color: #fff;
 }

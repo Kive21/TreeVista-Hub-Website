@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (source === 'user') {
       headerContainer.classList.add('user-header');
       headerContainer.innerHTML = `
-          <div class="header">
+        <div class="header">
         <div class="container">
             <div class="navbar">
                 <div class="logo">
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <li><a href="/products.html">Browse Trees</a></li>
                         <li><a href="/about.html">About</a></li>
                         <li><a href="/contact.html">Contact</a></li>
-                        <li><a href="users/user-profile.html">Account</a></li>
-                        <li><a href="/news.html" class="news-link" data-source="user"> News</a></li>
+                        <li><a href="/users/user-profile.html">Account</a></li>
+                        <li><a href="/news/news.html" class="news-link" data-source="user"> News</a></li>
                         <li><a id="auth-link"></a></li>
                     </ul>
                 </nav>
@@ -44,23 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (source === 'vendor') {
       headerContainer.classList.add('vendor-header');
       headerContainer.innerHTML = `
-<div class="container">
-    <div class="dashboard-header">
-        <h1>Vendor Dashboard</h1>
-    </div>
+      <div class="container">
+          <div class="dashboard-header">
+              <h1>Vendor Dashboard</h1>
+          </div>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="overview.html">Dashboard</a></li>
-            <li><a href="orders.html">Orders</a></li>
-            <li><a href="sales.html">Sales</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="inventory.html">Inventory</a></li>
-            <li><a href="vendor-profile.html">Account</a></li>
-            <li><a href="notifications.html">Notifications</a></li>
-        </ul>
-    </nav>`;
+          <!-- Navigation Bar -->
+            <nav id="vendor-nav">
+              <ul>
+                  <li><a href="overview.html">Dashboard</a></li>
+                  <li><a href="orders.html">Orders</a></li>
+                  <li><a href="sales.html">Sales</a></li>
+                  <li><a href="catalog.html">Catalog</a></li>
+                  <li><a href="inventory.html">Inventory</a></li>
+                  <li><a href="vendor-profile.html">Account</a></li>
+                  <li><a href="/news/news.html" class="news-link" data-source="vendor">News</a></li>
+                  <li><a href="notifications.html">Notifications</a></li>
+              </ul>
+          </nav>`;
     } else {
       headerContainer.innerHTML = '<p>Error: No source found for the header</p>';
     }
