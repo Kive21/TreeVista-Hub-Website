@@ -6,22 +6,29 @@
   <title>Vendor Dashboard - Tree Sapling E-commerce</title>
   <link rel="stylesheet" href="styles/vendor.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="vendor-logo">
           <img src="images/logoo2.png" alt="Tree Sapling E-commerce Logo">
         </div>
         <h1>Vendor Dashboard</h1>
       </header>
-  <nav>
-    <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-    <a href="#"><i class="fas fa-boxes"></i> Inventory</a>
-    <a href="#"><i class="fas fa-shopping-cart"></i> Orders</a>
-    <a href="#"><i class="fas fa-chart-line"></i> Reports</a>
-    <a href="#"><i class="fas fa-cog"></i> Settings</a>
-    <a href="#"><i class="fas fa-user"></i> Account</a>
-  </nav>
+  <div class="vendor-nav">
+    <nav>
+      <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a href="#"><i class="fas fa-boxes"></i> Inventory</a>
+      <a href="#"><i class="fas fa-shopping-cart"></i> Orders</a>
+      <a href="#"><i class="fas fa-chart-line"></i> Reports</a>
+      <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      <a href="news.html" class="news-link" data-source="vendor"><i class="fas fa-newspaper"></i> News</a>
+      <a href="#"><i class="fas fa-user"></i> Account</a>
+      <a href="#" id="vendor-login"><i class="fas fa-user"></i> Login</a>
+    </nav>
+  </div>
+  
   <main>
     <div class="dashboard-overview">
       <h2>Dashboard Overview</h2>
@@ -201,5 +208,15 @@
       </ul>
     </div>
   </main>
+
+<!-- Firebase JS SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics-compat.js"></script>
+
+<script type="module" src="js/auth.js" defer></script>
+<script type="module" src="js/script.js" defer></script>
+<script type="module" src="js/news.js" defer></script>
 </body>
 </html>

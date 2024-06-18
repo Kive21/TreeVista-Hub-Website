@@ -19,17 +19,17 @@ body {
     animation: headerFade 1s ease-in-out;
   }
   
-  .logo {
+  .vendor-logo {
     animation: logoPulse 2s infinite ease-in-out;
   }
   
-  .logo img {
+  .vendor-logo img {
     max-height: 50px;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
     transition: transform 0.3s ease-in-out;
   }
   
-  .logo:hover img {
+  .vendor-logo:hover img {
     transform: scale(1.1);
   }
   
@@ -57,14 +57,14 @@ body {
   }
   
   /* Navigation Styles */
-  nav {
+  .vendor-nav nav {
     background-color: #222;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     animation: navSlide 0.5s ease-in-out;
   }
   
-  nav a {
+  .vendor-nav nav a {
     float: left;
     color: white;
     text-align: center;
@@ -74,8 +74,8 @@ body {
     position: relative;
     overflow: hidden;
   }
-  
-  nav a:before {
+
+  .vendor-nav nav a:before {
     content: "";
     position: absolute;
     width: 0;
@@ -86,13 +86,13 @@ body {
     transition: width 0.3s ease-in-out;
   }
   
-  nav a:hover {
+  .vendor-nav nav a:hover {
     background-color: #4CAF50;
     transform: translateY(-2px);
     color: #222;
   }
   
-  nav a:hover:before {
+  .vendor-nav nav a:hover:before {
     width: 100%;
   }
   

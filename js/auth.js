@@ -130,7 +130,7 @@ if (userLoginForm) {
       const adminDoc = await getDoc(doc(db, 'admins', user.uid));
       if (adminDoc.exists()) {
         // Admin login successful
-        sweetAlertWithRedirect('You have successfully logged in as an admin.', 'success', 'index.html');
+        sweetAlertWithRedirect('Welcome back Admin ✨', 'success', 'index.html');
       } else {
         // User login, update user role
         await updateUserRole(user.uid, 'user');
@@ -306,14 +306,14 @@ if (adminLoginForm) {
       const adminDoc = await getDoc(doc(db, 'admins', user.uid));
       if (adminDoc.exists()) {
         // Admin login successful
-        sweetAlertWithRedirect('You have successfully logged in as an admin.', 'success', 'index.html');
+        sweetAlertWithRedirect('Welcome back Admin ✨', 'success', 'index.html');
       } else {
         // Check if the user is a vendor
         const vendorDoc = await getDoc(doc(db, 'vendors', user.uid));
         if (vendorDoc.exists()) {
           // Vendor login, update user role
           await updateUserRole(user.uid, 'vendor');
-          sweetAlertWithRedirect('You have successfully logged in as a vendor.', 'success', 'vendor-dashboard.html');
+          sweetAlertWithRedirect('Welcome back ✨', 'success', 'vendor-dashboard.html');
         } else {
           // Check if the user is a regular user
           const userDoc = await getDoc(doc(db, 'users', user.uid));
@@ -391,4 +391,51 @@ document.addEventListener('DOMContentLoaded', () => {
           navList.appendChild(signInListItem);
       }
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const vendorLoginLink = document.getElementById('vendor-login');
+
+    // Check user authentication state and update login link
+    onAuthStateChanged(auth, (user) => {
+        vendorLoginLink.innerHTML = ''; // Clear the existing content
+
+        if (user) {
+            // If user is signed in, display "Logout" link
+            const logoutLink = document.createElement('a');
+            logoutLink.href = '#'; // Use '#' to prevent default navigation
+            logoutLink.innerHTML = '<i class="fas fa-sign-out-alt"></i> Logout';
+
+            logoutLink.addEventListener('click', async (e) => {
+                e.preventDefault();
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Do you want to sign out?',
+                    showCancelButton: true,
+                    confirmButtonText: 'Sign out',
+                    cancelButtonText: 'Cancel'
+                }).then(async (result) => {
+                    if (result.isConfirmed) {
+                        try {
+                            await signOut(auth);
+                            console.log('User signed out');
+                            sweetAlertWithRedirect('You have successfully logged out.', 'info', 'vendor-dashboard.html');
+                        } catch (error) {
+                            console.error('Error signing out:', error);
+                            sweetAlertWithRedirect('Log out failed. Please try again.', 'error', 'vendor-dashboard.html');
+                        }
+                    }
+                });
+            });
+
+            vendorLoginLink.appendChild(logoutLink);
+        } else {
+            // If user is not signed in, display "Login" link
+            const loginLink = document.createElement('a');
+            loginLink.href = 'splashscreen.html'; // Update with login page URL
+            loginLink.innerHTML = '<i class="fas fa-sign-in-alt"></i> Login';
+
+            vendorLoginLink.appendChild(loginLink);
+        }
+    });
 });
