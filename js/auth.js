@@ -241,7 +241,7 @@ if (vendorLoginForm) {
         if (vendorDoc.exists()) {
           // Vendor login, update user role
           await updateUserRole(user.uid, 'vendor');
-          sweetAlertWithRedirect('Welcome back ✨', 'success', 'vendor-dashboard.html');
+          sweetAlertWithRedirect('Welcome back ✨', 'success', 'vendors/vendor-dashboard.html');
         } else {
           // User is not a vendor
           throw new Error('User is not a vendor');
@@ -313,7 +313,7 @@ if (adminLoginForm) {
         if (vendorDoc.exists()) {
           // Vendor login, update user role
           await updateUserRole(user.uid, 'vendor');
-          sweetAlertWithRedirect('Welcome back ✨', 'success', 'vendor-dashboard.html');
+          sweetAlertWithRedirect('Welcome back ✨', 'success', 'vendors/vendor-dashboard.html');
         } else {
           // Check if the user is a regular user
           const userDoc = await getDoc(doc(db, 'users', user.uid));

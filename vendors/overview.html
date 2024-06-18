@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../styles/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard-section">
+    <h2>Overview</h2>
+    <p>Brief overview of the vendor's account.</p>
+    
+    <!-- Analytics Section -->
+    <div class="dashboard-section">
+        <h2>Analytics</h2>
+        <div>
+            <h3>Sales Over Time</h3>
+            <canvas id="salesChart"></canvas>
+        </div>
+        <div>
+            <h3>Orders Over Time</h3>
+            <canvas id="ordersChart"></canvas>
+        </div>
+        <div>
+            <h3>Inventory Levels</h3>
+            <canvas id="inventoryChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="../js/vendor-analytics.js" defer></script>
+<script type="module" src="../js/vendor.js" defer></script>
+</body>
+</html>

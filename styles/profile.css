@@ -1,0 +1,317 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #87ceeb, #2e8b57);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  nav {
+    flex: 1;
+    text-align: right;
+  }
+  
+  nav ul {
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
+    background-size: 8px 8px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+  
+  a {
+    text-decoration: none;
+    color: #555;
+  }
+
+  .cart {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart:hover {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+}
+  
+    
+    .menu-icon {
+    width: 30px;
+    display: none;
+    cursor: pointer;
+    }
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 70px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 1);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007BFF;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+h2:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+button {
+    top: 50px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+}
+
+button:hover::before {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+#user-image {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#change-image-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #007BFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: background 0.3s ease;
+}
+
+#change-image-button:hover {
+    background: #0056b3;
+}
+
+.pencil-icon {
+    width: 20px;
+    height: 20px;
+}
+
+#content {
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 800px) {
+    .menu-icon {
+        display: inline-block; /* Show the menu icon */
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensure items are spaced apart */
+        padding: 20px;
+    }
+    
+    nav {
+        flex: 1;
+        text-align: right;
+        display: none; /* Hide the nav items by default */
+        position: absolute;
+        top: 140px; /* Adjust as per your header height */
+        left: 0;
+        background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 100; /* Ensure dropdown is above other content */
+    }
+    
+    nav.active {
+        display: block; /* Show the nav items */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px;
+        margin: 0; /* Remove default margin */
+    }
+    
+    nav ul li {
+        margin: 10px 0; /* Add spacing between items */
+        text-align: center; /* Center align items */
+    }
+}
+
+@media (max-width: 600px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .menu-icon {
+        display: inline-block; /* Show the menu icon */
+        cursor: pointer;/* Show the menu icon */
+        position: absolute;
+        top: 77px; /* Adjust as per your header height */
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensure items are spaced apart */
+        padding: 10px;
+    }
+    
+    nav {
+        flex: 1;
+        text-align: center; /* Center align items */
+        display: none; /* Hide the nav items by default */
+        position: absolute;
+        top: 130px; /* Adjust as per your header height */
+        left: 0;
+        background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 100; /* Ensure dropdown is above other content */
+    }
+    
+    nav.active {
+        display: block; /* Show the nav items */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px;
+        margin: 0; /* Remove default margin */
+    }
+    
+    nav ul li {
+        margin: 15x 0; /* Add spacing between items */
+    }
+}

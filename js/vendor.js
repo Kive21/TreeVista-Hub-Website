@@ -1,67 +1,96 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
-// import dotenv from 'dotenv';
-
-// TreeVista Hub Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyDztSMTwCkZ4ZMIELGb5sym_Ej5iX2yCTg",
-    authDomain: "treevista-database-133b4.firebaseapp.com",
-    projectId: "treevista-database-133b4",
-    storageBucket: "treevista-database-133b4.appspot.com",
-    messagingSenderId: "347600749387",
-    appId: "1:347600749387:web:1a09815a85556382751ece",
-    measurementId: "G-QFET2PTN20"
-  };
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-// dotenv.config();
-
-
-// Initialize Firestore and Storage
-const db = getFirestore();
-const storage = getStorage();
-
-
-// Initialize Firebase Analytics
-const analytics = getAnalytics(app);
-const storageRef = ref(storage);
-
-function sweetAlertWithRedirect(message, type, redirectUrl) {
-    Swal.fire({
-      title: type.charAt(0).toUpperCase() + type.slice(1),
-      text: message,
-      icon: type,
-      confirmButtonText: 'OK'
-    }).then(() => {
-      // Wait for 2 seconds before redirecting
-      setTimeout(() => {
-        window.location.href = redirectUrl;
-      }, 2000); // 2000 milliseconds = 2 seconds
-    });
-  }
-
-// Function to show error SweetAlert with cancel option
-const sweetAlertWithError = (title, message, formElement) => {
-  Swal.fire({
-    icon: 'error',
-    title: title,
-    text: message,
-    confirmButtonText: 'OK',
-    showCancelButton: true,
-    cancelButtonText: 'Cancel'
-  }).then((result) => {
-    if (result.isConfirmed) {
-      // If user confirms, redirect to the homepage
-      window.location.href = '';
-    } else {
-      // If user cancels, reset the form
-      formElement.reset();
+document.addEventListener("DOMContentLoaded", function() {
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("content").innerHTML = data;
+                initializeCharts();
+            });
     }
-  });
-};
 
+    function initializeCharts() {
+        if (document.getElementById('salesChart')) {
+            var ctxSales = document.getElementById('salesChart').getContext('2d');
+            var salesChart = new Chart(ctxSales, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                    datasets: [{
+                        label: 'Total Sales',
+                        data: [500, 1000, 750, 1500, 1200, 1700],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                        fill: false
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        if (document.getElementById('ordersChart')) {
+            var ctxOrders = document.getElementById('ordersChart').getContext('2d');
+            var ordersChart = new Chart(ctxOrders, {
+                type: 'bar',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                    datasets: [{
+                        label: 'Total Orders',
+                        data: [10, 20, 15, 25, 22, 27],
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        if (document.getElementById('inventoryChart')) {
+            var ctxInventory = document.getElementById('inventoryChart').getContext('2d');
+            var inventoryChart = new Chart(ctxInventory, {
+                type: 'pie',
+                data: {
+                    labels: ['Oak Tree', 'Pine Tree', 'Maple Tree'],
+                    datasets: [{
+                        label: 'Inventory Levels',
+                        data: [20, 15, 10],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                }
+            });
+        }
+    }
+
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            loadContent(event.target.href);
+        });
+    });
+
+    // Load default content
+    loadContent("overview.html");
+});

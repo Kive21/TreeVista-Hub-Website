@@ -639,3 +639,89 @@ nav ul li a:hover::after {
         display: none;
         }
         }
+
+        @media screen and (max-width: 800px) {
+          .menu-icon {
+              display: inline-block; /* Show the menu icon */
+          }
+          .navbar {
+              display: flex;
+              align-items: center;
+              justify-content: space-between; /* Ensure items are spaced apart */
+              padding: 20px;
+          }
+          
+          nav {
+              flex: 1;
+              text-align: right;
+              display: none; /* Hide the nav items by default */
+              position: absolute;
+              top: 140px; /* Adjust as per your header height */
+              left: 0;
+              background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+              width: 100%;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              z-index: 100; /* Ensure dropdown is above other content */
+          }
+          
+          nav.active {
+              display: block; /* Show the nav items */
+          }
+          
+          nav ul {
+              flex-direction: column; /* Stack items vertically */
+              padding: 20px;
+              margin: 0; /* Remove default margin */
+          }
+          
+          nav ul li {
+              margin: 10px 0; /* Add spacing between items */
+              text-align: center; /* Center align items */
+          }
+      }
+      
+      @media (max-width: 600px) {
+          body, html {
+              overflow-x: hidden;
+          }
+          
+          .menu-icon {
+              display: inline-block; /* Show the menu icon */
+              cursor: pointer;/* Show the menu icon */
+              position: absolute;
+              top: 77px; /* Adjust as per your header height */
+          }
+          .navbar {
+              display: flex;
+              align-items: center;
+              justify-content: space-between; /* Ensure items are spaced apart */
+              padding: 10px;
+          }
+          
+          nav {
+              flex: 1;
+              text-align: center; /* Center align items */
+              display: none; /* Hide the nav items by default */
+              position: absolute;
+              top: 130px; /* Adjust as per your header height */
+              left: 0;
+              background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+              width: 100%;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              z-index: 100; /* Ensure dropdown is above other content */
+          }
+          
+          nav.active {
+              display: block; /* Show the nav items */
+          }
+          
+          nav ul {
+              flex-direction: column; /* Stack items vertically */
+              padding: 20px;
+              margin: 0; /* Remove default margin */
+          }
+          
+          nav ul li {
+              margin: 15x 0; /* Add spacing between items */
+          }
+      }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="../styles/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="dashboard-section">
+        <h2>Catalog</h2>
+        <button class="btn-add">Add New Tree</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tree Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="tree.jpg" alt="Tree Image" class="tree-image"></td>
+                    <td>Oak Tree</td>
+                    <td>$30</td>
+                    <td>20</td>
+                    <td class="actions">
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                        <button class="btn-view">View</button>
+                    </td>
+                </tr>
+                <!-- More catalog items can be listed here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="module" src="../js/vendor.js" defer></script>
+
+</body>
+</html>
