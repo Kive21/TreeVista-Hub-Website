@@ -1,0 +1,727 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #87ceeb, #2e8b57);
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #87ceeb, #2e8b57);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  nav {
+    flex: 1;
+    text-align: right;
+  }
+  
+  nav ul {
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
+    background-size: 8px 8px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+  
+  a {
+    text-decoration: none;
+    color: #555;
+  }
+  
+  p {
+    color: #555;
+  }
+
+  .cart {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart:hover {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+}
+  
+    
+    .menu-icon {
+    width: 30px;
+    display: none;
+    cursor: pointer;
+    }
+    
+    /* Hero Section Styles */
+    .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+    .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    
+    .col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    }
+
+    .col-2 img {
+        max-width: 100%;
+        padding: 50px 0;
+      }
+    
+    .col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    animation: fadeInUp 1s ease;
+    }
+    
+    .col-2 p {
+    font-size: 16px;
+    color: #555;
+    margin: 25px 0;
+    animation: fadeInUp 1.5s ease;
+    }
+    
+    .btn {
+    display: inline-block;
+	background: rgb(67, 196, 27);
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    animation: fadeInUp 2s ease;
+    }
+    
+    .btn:hover {
+        background: #6d44b8;
+    }
+    .col-3 {
+        flex: 1 0 auto; /* Allow columns to grow equally */
+        margin: 0 30px; /* Adjust margin as needed */
+        display: flex; /* Nested flex container */
+        justify-content: center; /* Center content horizontally within column */
+    }
+    
+    .col-3 img {
+        width: 100%; /* Set a specific width for the images */
+        max-width: 200px; /* Limit maximum width to 200px */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below images */
+    }        
+      .categories {
+        margin: 70px 0;
+      }
+      
+      .col-3 {
+        flex-basis: 30%;
+        min-width: 250px;
+        margin-bottom: 30px;
+      }
+      
+      .col-3 img {
+        width: 100%;
+      }
+      
+      
+    
+    /* Featured Products Styles */
+    .small-container {
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    
+    .title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+    animation: fadeIn 1s ease;
+    }
+    
+    .title::after {
+    content: "";
+    background-color: #4CAF50;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
+    .col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s ease;
+    }
+    
+    .col-4:hover {
+    transform: translateY(-10px);
+    }
+    
+    .col-4 img {
+    width: 100%;
+    animation: fadeIn 1s ease;
+    }
+    
+    .col-4 h4 {
+    font-weight: normal;
+    margin: 10px 0;
+    animation: fadeInUp 1s ease;
+    }
+    
+    .col-4 p {
+    font-size: 14px;
+    color: #555;
+    animation: fadeInUp 1.5s ease;
+    }
+    
+    /* Offer Section Styles */
+    .offer {
+        background: linear-gradient(to right, #87ceeb, #2e8b57);
+    margin-top: 80px;
+    padding: 30px 0;
+    }
+    
+    .offer .row {
+    display: flex;
+    align-items: center;
+    }
+    
+    .offer .col-2 {
+    padding: 30px;
+    }
+    
+    .offer-img {
+    width: 100%;
+    animation: fadeIn 1s ease;
+    }
+    
+    .offer .col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    color: #000000;
+    animation: fadeInUp 1s ease;
+    }
+    
+    .offer .col-2 p {
+    font-size: 16px;
+    color: #000000;
+    margin: 25px 0;
+    animation: fadeInUp 1.5s ease;
+    }
+    
+    .offer .col-2 small {
+    color: #000000;
+    animation: fadeInUp 2s ease;
+    }
+    
+    .testimonial {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+      .testimonial .col-3 {
+        text-align: center;
+        padding: 40px 20px;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.5s;
+        flex-basis: 30%;
+        margin: 20px;
+      }
+      
+      .testimonial .col-3 img {
+        width: 50px;
+        margin-top: 20px;
+        border-radius: 50%;
+      }
+      
+      .testimonial .col-3:hover {
+        transform: translateY(-10px);
+      }
+      
+      .fa.fa-quote-left {
+        font-size: 34px;
+        color: #ff523b;
+      }
+      
+      .col-3 p {
+        font-size: 12px;
+        margin: 12px 0;
+        color: #777;
+      }
+      
+      .testimonial .col-3 h3 {
+        font-weight: 600;
+        color: #555;
+        font-size: 16px;
+      }
+
+      .col-5 img {
+        width: 120px; /* Set a specific width for the images */
+        max-width: 200px; /* Limit maximum width to 200px */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below images */
+    }   
+      
+
+    /* Footer Styles */
+    .footer {
+    background-color: #333;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    }
+    
+    .footer p {
+    color: #8a8a8a;
+    }
+    
+    .footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    }
+    
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+    }
+    
+    .footer-col-1 {
+    flex-basis: 30%;
+    }
+    
+    .footer-col-2 {
+    flex: 1;
+    text-align: center;
+    }
+    
+    .footer-col-3,
+    .footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
+    }
+    
+    .footer-col-1 p {
+    line-height: 20px;
+    animation: fadeInLeft 1s ease;
+    }
+    
+    .footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+    }
+    
+    .footer-col-3 h3,
+    .footer-col-4 h3 {
+    animation: fadeInRight 1s ease;
+    }
+    
+    .footer-col-3 ul,
+    .footer-col-4 ul {
+    list-style-type: none;
+    animation: fadeInRight 1.5s ease;
+    }
+    
+    .footer-col-3 ul li,
+    .footer-col-4 ul li {
+    margin-bottom: 12px;
+    }
+    
+    .footer-col-3 ul li a,
+    .footer-col-4 ul li a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+    
+    .footer-col-3 ul li a:hover,
+    .footer-col-4 ul li a:hover {
+    color: #fff;
+    }
+
+    .app-logo {
+        margin-top: 20px;
+      }
+      
+      .app-logo img {
+        width: 140px;
+      }
+    
+    .copyright {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    animation: fadeIn 2s ease;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+        opacity: 0;
+        transform: translateY(50px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+        
+        @keyframes fadeInDown {
+        0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+        
+        @keyframes fadeInLeft {
+        0% {
+        opacity: 0;
+        transform: translateX(-50px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+        }
+        
+        @keyframes fadeInRight {
+        0% {
+        opacity: 0;
+        transform: translateX(50px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+        }
+        
+        @keyframes bounceIn {
+        0% {
+        transform: scale(0.1);
+        opacity: 0;
+        }
+        60% {
+        transform: scale(1.2);
+        opacity: 1;
+        }
+        100% {
+        transform: scale(1);
+        }
+        }
+        
+        @keyframes slideIn {
+        0% {
+        transform: translateX(100%);
+        opacity: 0;
+        }
+        100% {
+        transform: translateX(0);
+        opacity: 1;
+        }
+        }
+        
+        @media screen and (max-width: 800px) {
+            .menu-icon {
+                display: inline-block; /* Show the menu icon */
+            }
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Ensure items are spaced apart */
+                padding: 20px;
+            }
+            
+            nav {
+                flex: 1;
+                text-align: right;
+                display: none; /* Hide the nav items by default */
+                position: absolute;
+                top: 130px; /* Adjust as per your header height */
+                left: 0;
+                background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+                width: 100%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 100; /* Ensure dropdown is above other content */
+            }
+            
+            nav.active {
+                display: block; /* Show the nav items */
+            }
+            
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                padding: 20px;
+                margin: 0; /* Remove default margin */
+            }
+            
+            nav ul li {
+                margin: 10px 0; /* Add spacing between items */
+                text-align: center; /* Center align items */
+            }
+        .row {
+        text-align: center;
+        margin: 100px auto 50px;
+        }
+        .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+        }
+        .single-product .row {
+        text-align: left;
+        }
+        .single-product .col-2 {
+        padding: 20px 0;
+        }
+        .single-product h1 {
+        font-size: 26px;
+        line-height: 32px;
+        }
+        .cart-info p {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        }
+        
+        @media (max-width: 600px) {
+            body, html {
+                overflow-x: hidden;
+            }
+            
+            .menu-icon {
+                display: inline-block; /* Show the menu icon */
+                cursor: pointer;/* Show the menu icon */
+                position: absolute;
+                top: 77px; /* Adjust as per your header height */
+            }
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; /* Ensure items are spaced apart */
+                padding: 10px;
+            }
+            
+            nav {
+                flex: 1;
+                text-align: center; /* Center align items */
+                display: none; /* Hide the nav items by default */
+                position: absolute;
+                top: 130px; /* Adjust as per your header height */
+                left: 0;
+                background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+                width: 100%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 100; /* Ensure dropdown is above other content */
+            }
+            
+            nav.active {
+                display: block; /* Show the nav items */
+            }
+            
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                padding: 20px;
+                margin: 0; /* Remove default margin */
+            }
+            
+            nav ul li {
+                margin: 15x 0; /* Add spacing between items */
+            }
+        .row {
+        text-align: center;
+        }
+        .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+        }
+        .single-product .row {
+        text-align: left;
+        }
+        .single-product .col-2 {
+        padding: 20px 0;
+        }
+        .single-product h1 {
+        font-size: 26px;
+        line-height: 32px;
+        }
+        .cart-info p {
+        margin-left: -50px;
+        }
+        .cart-info p {
+        display: none;
+        }
+        }
+
+        @media screen and (max-width: 800px) {
+          .menu-icon {
+              display: inline-block; /* Show the menu icon */
+          }
+          .navbar {
+              display: flex;
+              align-items: center;
+              justify-content: space-between; /* Ensure items are spaced apart */
+              padding: 20px;
+          }
+          
+          nav {
+              flex: 1;
+              text-align: right;
+              display: none; /* Hide the nav items by default */
+              position: absolute;
+              top: 140px; /* Adjust as per your header height */
+              left: 0;
+              background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+              width: 100%;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              z-index: 100; /* Ensure dropdown is above other content */
+          }
+          
+          nav.active {
+              display: block; /* Show the nav items */
+          }
+          
+          nav ul {
+              flex-direction: column; /* Stack items vertically */
+              padding: 20px;
+              margin: 0; /* Remove default margin */
+          }
+          
+          nav ul li {
+              margin: 10px 0; /* Add spacing between items */
+              text-align: center; /* Center align items */
+          }
+      }
+      
+      @media (max-width: 600px) {
+          body, html {
+              overflow-x: hidden;
+          }
+          
+          .menu-icon {
+              display: inline-block; /* Show the menu icon */
+              cursor: pointer;/* Show the menu icon */
+              position: absolute;
+              top: 77px; /* Adjust as per your header height */
+          }
+          .navbar {
+              display: flex;
+              align-items: center;
+              justify-content: space-between; /* Ensure items are spaced apart */
+              padding: 10px;
+          }
+          
+          nav {
+              flex: 1;
+              text-align: center; /* Center align items */
+              display: none; /* Hide the nav items by default */
+              position: absolute;
+              top: 130px; /* Adjust as per your header height */
+              left: 0;
+              background: linear-gradient(to right, #87ceeb, #2e8b57); /* Background color for the dropdown */
+              width: 100%;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              z-index: 100; /* Ensure dropdown is above other content */
+          }
+          
+          nav.active {
+              display: block; /* Show the nav items */
+          }
+          
+          nav ul {
+              flex-direction: column; /* Stack items vertically */
+              padding: 20px;
+              margin: 0; /* Remove default margin */
+          }
+          
+          nav ul li {
+              margin: 15x 0; /* Add spacing between items */
+          }
+      }

@@ -1,0 +1,241 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #87ceeb, #2e8b57);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.vendor-nav {
+  margin-bottom: 20px;
+}
+
+.vendor-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.vendor-nav ul li {
+  margin-right: 10px;
+}
+
+.vendor-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.vendor-nav ul li a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Dashboard sections */
+
+.dashboard-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.dashboard-section p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.dashboard-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.dashboard-section table,
+.dashboard-section th,
+.dashboard-section td {
+  border: 1px solid #ddd;
+}
+
+.dashboard-section th,
+.dashboard-section td {
+  padding: 12px;
+  text-align: left;
+}
+
+.dashboard-section th {
+  background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+.dashboard-section .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-section button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section button:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-view {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Notifications */
+.dashboard-section ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.dashboard-section ul li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+  border-left: 3px solid #007bff;
+}
+
+/* Analytics Section */
+.dashboard-section canvas {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+  .dashboard-header h1 {
+      font-size: 2rem;
+  }
+  nav ul {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  }
+  nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+  nav ul li a {
+      padding: 8px 16px;
+  }
+}
+
+/* Cool animations */
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.dashboard-section {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Graphs and analytics styling */
+
+.dashboard-section canvas {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Charts specific styling */
+
+@media (min-width: 768px) {
+  .dashboard-section canvas {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dashboard-section canvas:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Tree image styling */
+
+.tree-image {
+  max-width: 100px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

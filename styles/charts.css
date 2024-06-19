@@ -1,0 +1,82 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+/* Dashboard Section Styles */
+.dashboard-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #0056b3;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Paragraph */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Canvas Containers */
+canvas {
+    width: 100% !important;
+    max-width: 600px;
+    height: auto !important;
+    margin: 20px 0;
+}
+
+/* Flexbox Layout for Charts */
+.dashboard-section > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dashboard-section > div > div {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+}
+
+/* Enhancements for better visualization */
+.dashboard-section h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-section h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    margin-left: 10px;
+    background-color: #ddd;
+}

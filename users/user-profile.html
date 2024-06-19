@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="../styles/user-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="main-body">
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/images/Logo.png" alt="Treevista" width="300px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/products.html">Browse Trees</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="../users/user-profile.html">Account</a></li>
+                        <li><a href="/news/news.html" class="news-link" data-source="user"> News</a></li>
+                        <li><a id="auth-link"></a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html" class="cart">
+                    <img src="/images/cart.png" alt="Shopping cart icon">
+                </a>
+                <img src="/images/menu.png" alt="" id="menuIcon" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <br><br><br><br><br>
+    <h1>User Profile</h1>
+
+    <section id="user-info">
+        <h2>User Information</h2>
+        <div class="image-container">
+            <img src="/images/holding_sapling.png" alt="User Image" id="user-image">
+            <button id="change-image-button" class="change-image-button">
+                <img src="/images/change-photo.png" alt="Change Image" class="pencil-icon">
+            </button>
+        </div>
+        <p id="user-name">User Name: John Doe</p>
+        <p id="user-email">Email: john.doe@example.com</p>
+    </section>
+
+    <section id="orders">
+        <h2>Orders</h2>
+        <button class="normal-button">View Orders</button>
+        <button class="normal-button">Edit Order</button>
+        <button class="normal-button">Delete Order</button>
+    </section>
+
+    <section id="inbox">
+        <h2>Inbox</h2>
+        <button class="normal-button">View Inbox</button>
+    </section>
+
+    <section id="ratings-reviews">
+        <h2>Ratings & Reviews</h2>
+        <button class="normal-button">View Reviews</button>
+        <button class="normal-button">Edit Review</button>
+        <button class="normal-button">Delete Review</button>
+    </section>
+
+    <section id="vouchers">
+        <h2>Vouchers</h2>
+        <button class="normal-button">Add Voucher</button>
+        <button class="normal-button">View Vouchers</button>
+        <button class="normal-button">Edit Voucher</button>
+        <button class="normal-button">Delete Voucher</button>
+    </section>
+
+    <section id="saved-items">
+        <h2>Saved Items</h2>
+        <button class="normal-button">View Saved Items</button>
+        <button class="normal-button">Delete Saved Item</button>
+    </section>
+
+    <section id="recently-viewed-items">
+        <h2>Recently Viewed Items</h2>
+        <button class="normal-button">View Recently Viewed Items</button>
+        <button class="normal-button">Delete Recently Viewed Item</button>
+    </section>
+
+    <section id="recently-searched-items">
+        <h2>Recently Searched Items</h2>
+        <button class="normal-button">View Recently Searched Items</button>
+        <button class="normal-button">Delete Recently Searched Item</button>
+    </section>
+
+    <section id="address-book">
+        <h2>Address Book</h2>
+        <button class="normal-button">Add Address</button>
+        <button class="normal-button">View Addresses</button>
+        <button class="normal-button">Edit Address</button>
+        <button class="normal-button">Delete Address</button>
+    </section>
+
+    <section id="account-management">
+        <h2>Account Management</h2>
+        <button class="normal-button">Edit Account Information</button>
+    </section>
+
+    <section id="close-account">
+        <h2>Close Account</h2>
+        <button class="normal-button">Close Account</button>
+    </section>
+
+    <section id="logout">
+        <h2>Logout</h2>
+        <button class="normal-button">Logout</button>
+    </section>
+
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics-compat.js"></script>
+
+    <script type="module" src="/js/auth.js" defer></script>
+    <script type="module" src="/js/script.js" defer></script>
+    <script type="module" src="/js/news.js" defer></script>
+</body>
+</html>
