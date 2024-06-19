@@ -7,7 +7,7 @@
     <title>Treevista Hub - Your One-Stop Tree Marketplace</title>
     <meta name="description" content="Treevista Hub is a comprehensive platform that connects tree vendors with customers, allowing them to showcase and sell a diverse range of trees. The website also enables the generation of carbon credits, making it a sustainable and eco-friendly solution.">
     <link rel="stylesheet" type="text/css" href="/styles/home.css">
-    <link rel="stylesheet" type="text/css" href="../styles/news.css">
+    <link rel="stylesheet" type="text/css" href="/styles/news.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -17,89 +17,108 @@
 <body>
     <div id="header-container"></div>
 
-
-    body {
-        background: #001628;
-        color: #777;
-        padding: 4em;
-        font-family: sans-serif;
-        line-height: 1.15;
-      }
-      
-      hr { /*dummy content*/
-        height: 6px;
-        border: none;
-        background: rgba(0, 0, 0, 0.1);
-      } 
-      
-      hr:last-child {  /*dummy content*/
-        margin-right: 60%;
-      }
-      
-      hr.image { /*dummy content*/
-        padding-bottom: 50%;
-      } 
-      
-      .page {
-        padding: 2em;
-        background: #cecece;
-        max-width: 1100px;
-      }
-      
-      .archive {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        grid-gap: 1em;
-        grid-auto-flow: dense;
-      }
-      
-      .article {
-        padding: 1em;
-        background: #fff;
-        box-shadow:
-          0 5px 10px rgba(0, 0, 0, 0.1),
-          0 20px 20px rgba(0, 0, 0, 0.05);
-      }
-      
-      .article:nth-child(1) {
-        grid-column: 1 / 5;
-        background: rgba(200,200,255,0.3)
-      }
-      
-      .article:nth-child(1)>hr.image {
-        padding-bottom: 30%;
-      }
-      
-      .article:nth-child(1)>hr:last-child {
-        margin-right: 20%;
-        height: 28px
-      }
-      
-      .article:nth-child(1):after {
-        content: "grid-column: 1 / 5";
-      }
-      
-      .article:nth-child(8) {
-        grid-column: span 3 / -1;
-        background: rgba(255,200,255,0.3)
-      }
-      .article:nth-child(8):after {
-        content: "grid-column: span 3 / -1";
-      }
-      
-      .article:nth-child(12) {
-        grid-column: 1 / 4;
-        background: rgba(255,200,255,0.3)
-      }
-      .article:nth-child(12):after {
-        content: "grid-column: 1 / 4";
-      }
-      
-      .article:after {
-        color: #808;
-        font-weight: bold;
-        font-family: courier;
-      }
+    <div class="main-body">
+    <div class="page">
+        <h1>LATEST NEWS</h1>
+        <div class="archive">
+          <article class="article">1
+            <hr class="image">
+            <hr>
+          </article>
+          <article class="article">2
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">3
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">4
+            <hr class="image"><hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">5
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">6
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">7
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">8
+            <hr>
+            <hr>
+          </article>
+          <article class="article">9
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">10
+            <hr>
+            <hr>
+          </article>
+          <article class="article">11
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">12
+            <hr class="image"><hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">13
+            <hr class="image"><hr>
+            <hr>
+          </article>
+          <article class="article">14
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">15
+            <hr class="image">
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">16
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">17<hr>
+            <hr>
+            <hr></article>
+        </div>
+    </div>
+    </div>
 
 
     <!-- Brands -->
@@ -118,6 +137,7 @@
             </div>
         </div>
     </div>
+
 
 
     <div class="footer">
@@ -158,16 +178,15 @@
             <p class="copyright">Copyright &copy; 2024 - Treevista Hub</p>
         </div>
     </div>
-<!-- Firebase JS SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics-compat.js"></script>
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics-compat.js"></script>
 
-<script type="module" src="js/auth.js" defer></script>
-<script type="module" src="js/script.js" defer></script>
-<script type="module" src="js/news.js" defer></script>
+    <script type="module" src="../js/auth.js" defer></script>
+    <script type="module" src="../js/script.js" defer></script>
+    <script type="module" src="../js/news.js" defer></script>
   
 </body>
-
 </html>

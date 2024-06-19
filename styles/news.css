@@ -1,10 +1,13 @@
 body {
-    background: #001628;
+    background: linear-gradient(to right, #87ceeb, #2e8b57);
+  }
+
+.main-body {
     color: #777;
     padding: 4em;
     font-family: sans-serif;
     line-height: 1.15;
-  }
+}
   
   hr { /*dummy content*/
     height: 6px;
@@ -80,3 +83,6 @@ body {
     font-weight: bold;
     font-family: courier;
   }
+
+
+

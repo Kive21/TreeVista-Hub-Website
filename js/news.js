@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const newsSource = sessionStorage.getItem('newsSource');
     updateHeader(newsSource);
+
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+  }
+  
+  // Adding event listener to the menu icon
+  document.getElementById('menuIcon').addEventListener('click', toggleMenu);
   });
   
   function updateHeader(source) {
@@ -23,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="images/Logo.png" alt="Treevista" width="300px">
+                    <img src="/images/Logo.png" alt="Treevista" width="300px">
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="/products.html">Browse Trees</a></li>
                         <li><a href="/about.html">About</a></li>
                         <li><a href="/contact.html">Contact</a></li>
@@ -37,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </ul>
                 </nav>
                 <a href="cart.html" class="cart">
-                    <img src="images/cart.png" alt="Shopping cart icon">
+                    <img src="/images/cart.png" alt="Shopping cart icon">
                 </a>
-                <img src="images/menu.png" alt="" id="menuIcon" class="menu-icon" onclick="menutoggle()">
+                <img src="/images/menu.png" alt="" id="menuIcon" class="menu-icon" onclick="menutoggle()">
             </div>`;
     } else if (source === 'vendor') {
       headerContainer.classList.add('vendor-header');

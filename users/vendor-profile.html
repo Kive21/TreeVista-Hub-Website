@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Profile</title>
+    <link rel="stylesheet" type="text/css" href="../styles/vendor-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h1>Vendor Profile</h1>
+
+    <section id="basic-information">
+        <h2>Basic Information</h2>
+        <div class="image-container">
+            <img src="/images/holding_sapling.png" alt="Vendor Image" id="vendor-image">
+            <button id="change-vendor-image-button">
+                <img src="/images/change-photo.png" alt="Change Image" class="pencil-icon">
+            </button>
+        </div>
+        <p id="vendor-name">Vendor Name: Tree Vendor</p>
+        <p id="vendor-email">Email: vendor@example.com</p>
+    </section>
+
+    <section id="address-book">
+        <h2>Address Book</h2>
+        <button>Add Address</button>
+        <button>View Addresses</button>
+        <button>Edit Address</button>
+        <button>Delete Address</button>
+    </section>
+
+    <section id="account-management">
+        <h2>Account Management</h2>
+        <button>Edit Account Information</button>
+    </section>
+
+    <section id="close-account">
+        <h2>Close Account</h2>
+        <button>Close Account</button>
+    </section>
+
+    <section id="logout">
+        <h2>Logout</h2>
+        <button>Logout</button>
+    </section>
+
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics-compat.js"></script>
+
+    <script type="module" src="/js/auth.js" defer></script>
+    <script type="module" src="/js/script.js" defer></script>
+    <script type="module" src="/js/news.js" defer></script>
+</body>
+</html>
