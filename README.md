@@ -5,7 +5,7 @@ Project Overview
 TreeVista Hub is an innovative marketplace that facilitates the sale of trees by various vendors. Our platform is not only a marketplace but also a part of a broader initiative to combat climate change by enabling the generation of carbon credits through tree planting. The website aims to provide vendors with a convenient way to showcase and sell their trees, while also offering buyers an opportunity to contribute to carbon offset initiatives.
 
 Website Link
-Access the TreeVista Hub website here: https://treevista-hub.netlify.app/
+Access the TreeVista Hub website here: [https://treevista-hub.netlify.app/](https://tree-vista-hub.vercel.app/)
 
 Current Features
 Firebase-Based Database and Authentication
